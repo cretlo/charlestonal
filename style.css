@@ -127,8 +127,8 @@ button:hover {
 
 .navbar h1 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 80rem;
-          flex: 1 1 80rem;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
   font-family: "Sriracha", cursive;
   font-weight: normal;
   font-size: 3.4rem;
