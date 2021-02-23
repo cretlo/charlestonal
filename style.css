@@ -404,7 +404,7 @@ nav .active {
 }
 
 .large-img {
-  max-width: 65%;
+  max-height: 65%;
   position: absolute;
   left: 50%;
   top: 50%;
