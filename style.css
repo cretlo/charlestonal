@@ -47,7 +47,7 @@ p {
 }
 
 h2 {
-  font-size: 10rem;
+  font-size: 9rem;
 }
 
 h3 {
@@ -68,7 +68,6 @@ a {
 }
 
 button {
-  padding: 2rem 4rem;
   background: #a6808c;
   border: none;
   color: white;
@@ -197,18 +196,18 @@ nav .active {
 }
 
 .hero-container h2 {
-  font-size: 10rem;
+  font-size: 9rem;
 }
 
 .hero-container p {
   margin-top: 3rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .hero-container button {
   margin-top: 10rem;
-  border-radius: 3rem;
-  padding: 3rem 3rem;
+  border-radius: 2rem;
+  padding: 2.4rem 3rem;
 }
 
 #about {
@@ -266,7 +265,7 @@ nav .active {
 
 .descriptions-container h4 {
   text-decoration: underline;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .descriptions-container p {
@@ -635,7 +634,7 @@ form {
       -ms-flex: 1 1 50rem;
           flex: 1 1 50rem;
   margin-top: 3rem;
-  padding: 5rem 20rem 14rem 20rem;
+  padding: 5rem 15rem 14rem 15rem;
   background: #706677;
   border-radius: 3rem;
   position: relative;
@@ -662,7 +661,7 @@ form .message {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3rem;
 }
 
 form .message {
@@ -679,7 +678,7 @@ form .message textarea:placeholder-shown {
 
 form button {
   width: 100%;
-  padding: 3rem 0;
+  padding: 2rem 0;
   bottom: 0;
   position: absolute;
   border-bottom-left-radius: 3rem;
@@ -701,6 +700,7 @@ footer {
 .footer-container {
   max-width: 95%;
   margin: 0 auto;
+  padding: 1rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,7 +744,7 @@ footer {
 }
 
 .footer-container img {
-  height: 7rem;
+  height: 5rem;
 }
 
 @media (max-width: 1424px) {
