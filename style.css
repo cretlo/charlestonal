@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -43,7 +43,7 @@ label,
 input,
 p {
   font-size: 2rem;
-  line-height: 3.5rem;
+  line-height: 1.6;
 }
 
 h2 {
