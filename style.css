@@ -247,7 +247,7 @@ nav li {
 .hero-container button {
   margin-top: 10rem;
   border-radius: 2rem;
-  padding: 2.4rem 3rem;
+  padding: 1rem 3rem;
 }
 
 #about {
@@ -784,7 +784,7 @@ form .message textarea:placeholder-shown {
 
 form button {
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
   bottom: 0;
   position: absolute;
   border-bottom-left-radius: 3rem;
