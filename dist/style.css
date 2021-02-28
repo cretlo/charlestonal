@@ -5,16 +5,13 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -719,16 +716,15 @@ nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 6rem auto 0 auto;
 }
 
 form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -736,14 +732,12 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  min-height: 65rem;
   margin-top: 4rem;
-  padding: 5rem 15rem 14rem 15rem;
+  position: relative;
   background: #706677;
   border-radius: 3rem;
-  position: relative;
+  padding: 0 3rem;
 }
 
 form label {
@@ -767,19 +761,15 @@ form .message {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
-form .message {
-  margin-bottom: 0rem;
-}
-
-form .message textarea {
+form textarea {
   padding: 1rem;
   font-size: 2rem;
 }
 
-form .message textarea:placeholder-shown {
+form textarea:placeholder-shown {
   font-size: 2rem;
 }
 
@@ -802,6 +792,7 @@ form button {
 
 footer {
   min-height: 10vh;
+  max-width: 100%;
 }
 
 .footer-container {
