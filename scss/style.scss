@@ -46,6 +46,7 @@ $active: rgb(42, 28, 56);
   }
 }
 
+
 @media (max-width: 1067px) {
   .navbar h1 {
     text-align: center;
@@ -136,6 +137,10 @@ $active: rgb(42, 28, 56);
 
   .img-container {
     flex: 1 1 22rem;
+  }
+
+  form {
+    min-width: 80%;
   }
 
   .footer-container h5 {

@@ -1,15 +1,12 @@
 #contact {
   min-height: 100vh;
-  @include flex(center, center, row);
-}
-
-.form-container {
   @include flex(center, center, column);
 }
 
 form {
   @include flex(flex-start, center, column);
   min-height: 65rem;
+  min-width: 30%;
   margin-top: 4rem;
   position: relative;
   background: $primary;
