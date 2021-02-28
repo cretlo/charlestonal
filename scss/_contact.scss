@@ -8,10 +8,10 @@ form {
   min-height: 65rem;
   min-width: 30%;
   margin-top: 4rem;
-  position: relative;
+  padding: 0 3rem;
   background: $primary;
   border-radius: 3rem;
-  padding: 0 3rem;
+  position: relative;
 
   label {
     color: white;
@@ -28,6 +28,7 @@ form {
   textarea {
     padding: 1rem;
     font-size: 2rem;
+    width: 100%;
 
     &:placeholder-shown {
       font-size: 2rem;

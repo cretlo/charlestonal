@@ -141,6 +141,8 @@ $active: rgb(42, 28, 56);
 
   form {
     min-width: 80%;
+    
+    
   }
 
   .footer-container h5 {
@@ -152,6 +154,7 @@ $active: rgb(42, 28, 56);
   .img-container {
     flex: 1 1 16rem;
   }
+
 }
 @media (max-width: 370px) {
   .img-container {

@@ -357,6 +357,7 @@ nav li {
   margin-right: 1rem;
   -webkit-box-shadow: 0px 0px 8px;
           box-shadow: 0px 0px 8px;
+  pointer-events: none;
 }
 
 .people-card p {
@@ -591,6 +592,7 @@ nav li {
   margin-top: 13rem;
   -webkit-box-shadow: -2rem 1rem 2rem grey;
           box-shadow: -2rem 1rem 2rem grey;
+  pointer-events: none;
 }
 
 .location-container {
@@ -719,10 +721,10 @@ form {
   min-height: 65rem;
   min-width: 30%;
   margin-top: 4rem;
-  position: relative;
+  padding: 0 3rem;
   background: #706677;
   border-radius: 3rem;
-  padding: 0 3rem;
+  position: relative;
 }
 
 form label {
@@ -752,6 +754,7 @@ form .message {
 form textarea {
   padding: 1rem;
   font-size: 2rem;
+  width: 100%;
 }
 
 form textarea:placeholder-shown {
