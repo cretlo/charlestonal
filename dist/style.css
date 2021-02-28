@@ -776,6 +776,7 @@ form .message {
 
 form .message textarea {
   padding: 1rem;
+  font-size: 2rem;
 }
 
 form .message textarea:placeholder-shown {
