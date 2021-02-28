@@ -1,0 +1,81 @@
+/* Global Styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  flex: 1;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: $header1;
+}
+
+header {
+  max-width: 100%;
+  flex: 1;
+  overflow-x: hidden;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: $paragraph;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+h3 {
+  font-size: $header3;
+  width: 100%;
+  text-align: center;
+}
+
+h4,
+h5 {
+  font-size: $header4;
+  font-weight: normal;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: $button;
+  border: none;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  text-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.5);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button:hover {
+  background: $hover;
+}

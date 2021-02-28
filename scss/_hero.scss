@@ -1,0 +1,34 @@
+#hero {
+  background: linear-gradient(black, transparent),
+    url('imgs/house-front.jpg') center center/cover;
+  object-fit: cover;
+  color: white;
+  text-align: center;
+}
+
+.hero-container {
+  min-height: 92vh;
+  @include flex(center, center, column);
+  max-width: 80%;
+  margin: 0 auto;
+
+  h2,
+  p {
+    text-shadow: 0 0 1rem black;
+  }
+
+  h2 {
+    font-size: $header2;
+  }
+
+  p {
+    margin-top: 3rem;
+    font-size: 3.5rem;
+  }
+
+  button {
+    margin-top: 10rem;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+  }
+}

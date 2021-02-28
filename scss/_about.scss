@@ -1,0 +1,63 @@
+#about {
+  min-height: 100vh;
+  p {
+    text-indent: 5%;
+  }
+
+  @include flex(center, center, row);
+}
+
+.about-container {
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+  border-radius: 15px;
+  max-width: 90%;
+  margin: 3rem auto 0 auto;
+}
+
+.people-container,
+.descriptions-container {
+  margin-top: 0;
+}
+
+.descriptions-container {
+  flex: 1 1 50rem;
+  @include flex(space-around, center, column);
+  padding: 0 1rem;
+
+  h4 {
+    text-decoration: underline;
+    margin-top: 4rem;
+  }
+
+  p {
+    padding: 0rem 3rem;
+    margin-top: 2rem;
+  }
+}
+
+.people-container {
+  padding: 1rem;
+  flex: 1 1 50rem;
+}
+
+.people-card {
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+
+  img {
+    flex: 0 2 8rem;
+    height: 15rem;
+    margin: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    box-shadow: 0px 0px 8px;
+  }
+
+  p {
+    flex: 1 1 40rem;
+    background-color: $tertiary;
+    padding: 2rem 3rem;
+    border-radius: 3rem;
+  }
+}

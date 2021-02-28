@@ -1,0 +1,60 @@
+#contact {
+  min-height: 100vh;
+  @include flex(center, center, row);
+}
+
+.form-container {
+  @include flex(center, center, column);
+  margin: 6rem auto 0 auto;
+}
+
+form {
+  @include flex(space-evenly, center, column);
+  flex: 1 1 50rem;
+  margin-top: 4rem;
+  padding: 5rem 15rem 14rem 15rem;
+  background: $primary;
+  border-radius: 3rem;
+  position: relative;
+
+  label {
+    color: white;
+  }
+
+  .name,
+  .email,
+  .phone,
+  .message {
+    @include flex(space-evenly, center, column);
+    margin-bottom: 3rem;
+  }
+
+  .message {
+    margin-bottom: 0rem;
+
+    textarea {
+      padding: 1rem;
+
+      &:placeholder-shown {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem 0;
+    bottom: 0;
+    position: absolute;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}

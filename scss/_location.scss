@@ -1,0 +1,67 @@
+#location {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  @include flex(center, center, row);
+
+  #colorado-flag {
+    background-color: linear-gradient(transparent, white);
+    position: absolute;
+    height: 30rem;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+    margin-top: 13rem;
+    box-shadow: -2rem 1rem 2rem grey;
+  }
+}
+
+.location-container {
+  max-width: 95%;
+  margin: 5rem auto 0 auto;
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+
+  h3 {
+    width: 100%;
+  }
+
+  h4 {
+    text-decoration: underline;
+    text-align: center;
+  }
+}
+
+.description {
+  margin-top: 10rem;
+  @include flex(center, center, column);
+  flex-wrap: wrap;
+}
+
+#location-description {
+  flex: 1 1 60rem;
+  background: $tertiary;
+  padding: 3rem;
+  border-radius: 3rem;
+
+  p {
+    margin-top: 3rem;
+    text-indent: 3%;
+  }
+}
+
+#address {
+  flex: 1 1 30rem;
+  @include flex(space-between, center, column);
+
+  h4 {
+    margin: 3rem 0;
+  }
+
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}

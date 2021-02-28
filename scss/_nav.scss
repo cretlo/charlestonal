@@ -1,0 +1,70 @@
+#main-header {
+  background-color: $primary;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar {
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+  min-height: 8vh;
+  max-width: 90%;
+  margin: 0 auto;
+
+  a {
+    flex: 1 1 40rem;
+    padding: 2rem 2rem;
+    outline: none;
+  }
+
+  h1 {
+    font-family: "Sriracha", cursive;
+    font-weight: normal;
+    font-size: $header1;
+  }
+}
+
+.burger-container {
+  @include flex(center, center, row);
+  display: none;
+
+  img {
+    padding: 1rem;
+    height: 6rem;
+  }
+}
+
+nav {
+  padding: 2rem 2rem 2rem 0;
+  flex: 1 1 60rem;
+  transition: all 0.3s ease-in-out;
+
+  .nav-links {
+    transition: all 0.3s ease-in-out;
+  }
+
+  ul {
+    @include flex(space-between, center, row);
+
+    list-style: none;
+  }
+
+  a {
+    transition: all 0.5s ease;
+    padding: 1rem 2rem;
+
+    &:hover {
+      color: darkgray;
+    }
+  }
+
+  li {
+    font-size: $paragraph;
+  }
+}
+
+.nav-open {
+  transform: translateX(-100%);
+}

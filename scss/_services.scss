@@ -1,0 +1,45 @@
+#services {
+  min-height: 100vh;
+  margin: 0 auto;
+  @include flex(center, center, row);
+}
+
+.services-container {
+  max-width: 90%;
+  margin: 8.5rem auto 0 auto;
+}
+
+.cards {
+  margin-top: 3rem;
+  @include flex(center, stretch, row);
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 35rem;
+  max-height: 100%;
+  margin: 1rem;
+  @include flex(stretch, center, column);
+  padding: 2rem 5rem;
+  box-shadow: 0 0 1rem grey;
+  border-radius: 3rem;
+
+  img {
+    height: 10rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ul {
+    margin-top: 3rem;
+  }
+
+  li {
+    margin-top: 0.5rem;
+  }
+}
