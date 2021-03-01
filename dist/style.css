@@ -968,11 +968,12 @@ footer {
     padding: 4rem 15rem;
   }
   #hero h2 {
-    font-size: 5rem;
+    font-size: 6rem;
   }
   #hero p {
     font-size: 3rem;
   }
+  .hero-container,
   .about-container,
   .gallery-container,
   .services-container,
