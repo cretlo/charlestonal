@@ -7,14 +7,14 @@
 }
 
 .navbar {
-  @include flex(space-around, center, row);
+  @include flex(space-between, center, row);
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
   min-height: 8vh;
 
   h1 {
-    flex: 1 1 30rem;
+    flex: 2;
     font-family: 'Sriracha', cursive;
     font-weight: normal;
     font-size: $header1;
@@ -22,7 +22,7 @@
 }
 
 .nav-links {
-  flex: 1 1 60rem;
+  flex: 1;
   @include flex(space-between, center, row);
   transition: all 0.3s ease-in-out;
   list-style: none;

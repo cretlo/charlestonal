@@ -43,8 +43,8 @@ $active: rgb(42, 28, 56);
 }
 
 @media (max-width: 1067px) {
-  .navbar h1 {
-    text-align: center;
+  .navbar {
+    justify-content: center;
   }
 }
 
