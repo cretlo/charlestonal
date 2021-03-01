@@ -11,6 +11,9 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -19,7 +22,6 @@ section {
       -ms-flex: 1;
           flex: 1;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -31,7 +33,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow-x: hidden;
 }
 
 li,

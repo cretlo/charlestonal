@@ -10,13 +10,15 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
 }
 
 section {
   flex: 1;
   max-width: 100%;
-  overflow-x: hidden;
 }
 h1 {
   font-size: $header1;
@@ -25,7 +27,6 @@ h1 {
 header {
   max-width: 100%;
   flex: 1;
-  overflow-x: hidden;
 }
 
 li,
