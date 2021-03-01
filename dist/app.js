@@ -57,6 +57,6 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   heroContainer.classList.add('active');
 });
