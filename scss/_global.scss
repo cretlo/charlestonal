@@ -19,6 +19,7 @@ body {
 section {
   flex: 1;
   max-width: 100%;
+  overflow-x: hidden;
 }
 h1 {
   font-size: $header1;
