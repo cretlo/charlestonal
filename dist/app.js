@@ -1,14 +1,13 @@
+const navLinks = document.querySelector('.nav-links');
+const burgerContainer = document.querySelector('.burger-container');
+const open = document.getElementById('open');
+const close = document.getElementById('close');
 const heroContainer = document.querySelector('.hero-container');
-
 const modal = document.querySelector('.modal');
 const previews = document.querySelectorAll('.gallery-container img');
 const largeImg = document.querySelector('.large-img');
 const caption = document.querySelector('.caption');
-const navLinks = document.querySelector('.nav-links');
-const burgerContainer = document.querySelector('.burger-container');
-const close = document.getElementById('close');
-const open = document.getElementById('open');
-const links = document.querySelectorAll('.nav-links li a');
+const anchorLinks = document.querySelectorAll('.nav-links li a');
 
 console.log(open);
 
@@ -20,20 +19,21 @@ open.addEventListener('click', () => {
 
 // Closes navigation on mobile
 close.addEventListener('click', () => {
-  burgerContainer.classList.toggle('open');
   navLinks.classList.toggle('nav-open');
+  burgerContainer.classList.toggle('open');
 });
 
-// Closes navigation if link is clicked
-links.forEach((link) => {
+// Closes navigation if a link is clicked, on mobile
+anchorLinks.forEach((link) => {
   link.addEventListener('click', () => {
     if (navLinks.classList.contains('nav-open')) {
       navLinks.classList.remove('nav-open');
+      burgerContainer.classList.toggle('open');
     }
   });
 });
 
-// Large image modal display
+// Large image modal displayed when a preview is clicked
 previews.forEach((preview) => {
   preview.addEventListener('click', (e) => {
     const largeSrc = e.target.getAttribute('data-original');
@@ -46,7 +46,7 @@ previews.forEach((preview) => {
   });
 });
 
-// Modal closing
+// Closes modal clicked anywhere
 modal.addEventListener('click', (e) => {
   if (
     e.target.classList[1] === 'open' ||
