@@ -4,18 +4,19 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  min-height: 8vh;
 }
 
 .navbar {
   @include flex(space-around, center, row);
   flex-wrap: wrap;
-  min-height: 8vh;
   max-width: 90%;
   margin: 0 auto;
+  padding: 1rem 0;
 
   a {
     flex: 1 1 40rem;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     outline: none;
   }
 
@@ -62,7 +63,6 @@
 .nav-links {
   flex: 1 1 60rem;
   @include flex(space-between, center, row);
-  padding: 2rem 2rem 2rem 0;
   transition: all 0.3s ease-in-out;
   list-style: none;
 
