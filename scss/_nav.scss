@@ -4,7 +4,6 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  min-height: 8vh;
 }
 
 .navbar {
@@ -12,19 +11,39 @@
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
-  padding: 1rem 0;
-
-  a {
-    flex: 1 1 40rem;
-    padding: 1rem 2rem;
-    outline: none;
-  }
+  min-height: 8vh;
 
   h1 {
+    flex: 1 1 30rem;
     font-family: 'Sriracha', cursive;
     font-weight: normal;
     font-size: $header1;
   }
+}
+
+.nav-links {
+  flex: 1 1 60rem;
+  @include flex(space-between, center, row);
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+  padding: 1rem;
+
+  a {
+    transition: all 0.5s ease;
+    padding: 1rem 2rem;
+
+    &:hover {
+      color: darkgray;
+    }
+  }
+
+  li {
+    font-size: $paragraph;
+  }
+}
+
+.nav-open {
+  transform: translateX(-100%);
 }
 
 .burger-container {
@@ -58,28 +77,4 @@
 .burger-container.open #close {
   transform: translateY(0%);
   transition: transform 0.3s ease;
-}
-
-.nav-links {
-  flex: 1 1 60rem;
-  @include flex(space-between, center, row);
-  transition: all 0.3s ease-in-out;
-  list-style: none;
-
-  a {
-    transition: all 0.5s ease;
-    padding: 1rem 2rem;
-
-    &:hover {
-      color: darkgray;
-    }
-  }
-
-  li {
-    font-size: $paragraph;
-  }
-}
-
-.nav-open {
-  transform: translateX(-100%);
 }
