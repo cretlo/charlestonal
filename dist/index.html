@@ -30,7 +30,8 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="burger-container">
-            <img src="icons/iconmonstr-menu-2.svg" />
+            <img id="open" src="icons/iconmonstr-menu-2.svg" />
+            <img id="close" src="icons/iconmonstr-x-mark-1.svg" />
           </div>
         </nav>
       </div>
@@ -121,7 +122,7 @@
         <div class="img-container">
           <img
             src="previews/CAL_06.jpg"
-            alt="The full living/lounging room"
+            alt="The full living/lounging room."
             data-original="gallery/CAL_06.jpg"
           />
         </div>
@@ -316,43 +317,42 @@
     </section>
 
     <section id="contact">
-        <h3>Contact</h3>
-        <form
-          name="contact"
-          method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-        >
-          <p class="hidden">
-            <label
-              >Don’t fill this out if you’re human: <input name="bot-field"
-            /></label>
-          </p>
-          <div class="name">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div class="email">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div class="phone">
-            <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" />
-          </div>
-          <div class="message">
-            <label for="message">Comments</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="25"
-              rows="4"
-              placeholder="Please don't hesitate to ask us any questions."
-            ></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-
+      <h3>Contact</h3>
+      <form
+        name="contact"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+      >
+        <p class="hidden">
+          <label
+            >Don’t fill this out if you’re human: <input name="bot-field"
+          /></label>
+        </p>
+        <div class="name">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="phone">
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="message">
+          <label for="message">Comments</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="25"
+            rows="4"
+            placeholder="Please don't hesitate to ask us any questions."
+          ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </section>
 
     <footer>

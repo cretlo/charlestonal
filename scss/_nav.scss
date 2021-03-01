@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-family: "Sriracha", cursive;
+    font-family: 'Sriracha', cursive;
     font-weight: normal;
     font-size: $header1;
   }
@@ -29,27 +29,42 @@
 .burger-container {
   @include flex(center, center, row);
   display: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
 
   img {
     padding: 1rem;
     height: 6rem;
   }
+
+  #close {
+    position: absolute;
+    transform: translateY(110%);
+    transition: transform 0.3s ease;
+  }
+
+  #open {
+    transform: translateY(0%);
+    transition: transform 0.3s ease;
+  }
 }
 
-nav {
-  padding: 2rem 2rem 2rem 0;
+.burger-container.open #open {
+  transform: translateY(-110%);
+  transition: transform 0.3s ease;
+}
+.burger-container.open #close {
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+}
+
+.nav-links {
   flex: 1 1 60rem;
+  @include flex(space-between, center, row);
+  padding: 2rem 2rem 2rem 0;
   transition: all 0.3s ease-in-out;
-
-  .nav-links {
-    transition: all 0.3s ease-in-out;
-  }
-
-  ul {
-    @include flex(space-between, center, row);
-
-    list-style: none;
-  }
+  list-style: none;
 
   a {
     transition: all 0.5s ease;

@@ -5,17 +5,26 @@ const previews = document.querySelectorAll('.gallery-container img');
 const largeImg = document.querySelector('.large-img');
 const caption = document.querySelector('.caption');
 const navLinks = document.querySelector('.nav-links');
-const burger = document.querySelector('.burger-container').firstElementChild;
+const burgerContainer = document.querySelector('.burger-container');
+const close = document.getElementById('close');
+const open = document.getElementById('open');
 const links = document.querySelectorAll('.nav-links li a');
 
-console.log(burger);
+console.log(open);
 
 // Opens navigation on mobile
-burger.addEventListener('click', () => {
+open.addEventListener('click', () => {
   navLinks.classList.toggle('nav-open');
+  burgerContainer.classList.toggle('open');
 });
 
 // Closes navigation on mobile
+close.addEventListener('click', () => {
+  burgerContainer.classList.toggle('open');
+  navLinks.classList.toggle('nav-open');
+});
+
+// Closes navigation if link is clicked
 links.forEach((link) => {
   link.addEventListener('click', () => {
     if (navLinks.classList.contains('nav-open')) {
