@@ -20,21 +20,17 @@ $active: rgb(42, 28, 56);
   flex-direction: $direction;
 }
 
-@import "global";
-@import "nav";
-@import "hero";
-@import "about";
-@import "gallery";
-@import "services";
-@import "location";
-@import "contact";
-@import "footer";
+@import 'global';
+@import 'nav';
+@import 'hero';
+@import 'about';
+@import 'gallery';
+@import 'services';
+@import 'location';
+@import 'contact';
+@import 'footer';
 
 @media (max-width: 1424px) {
-  .img-container {
-    flex: 1 1 25rem;
-  }
-
   .large-img {
     max-width: 90%;
   }
@@ -46,7 +42,6 @@ $active: rgb(42, 28, 56);
   }
 }
 
-
 @media (max-width: 1067px) {
   .navbar h1 {
     text-align: center;
@@ -56,6 +51,10 @@ $active: rgb(42, 28, 56);
 @media (max-width: 900px) {
   #hero h2 {
     font-size: 8rem;
+  }
+
+  .img-container {
+    flex-basis: 30%;
   }
 }
 
@@ -132,37 +131,14 @@ $active: rgb(42, 28, 56);
   }
 
   .img-container {
-    flex: 1 1 20rem;
-  }
-
-  .img-container {
-    flex: 1 1 22rem;
+    flex-basis: 28%;
   }
 
   form {
     min-width: 80%;
-    
-    
   }
 
   .footer-container h5 {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 496px) {
-  .img-container {
-    flex: 1 1 16rem;
-  }
-
-}
-@media (max-width: 370px) {
-  .img-container {
-    flex: 1 1 14rem;
-  }
-}
-@media (max-width: 332px) {
-  .img-container {
-    flex: 1 1 12rem;
   }
 }

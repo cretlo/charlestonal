@@ -420,9 +420,8 @@ nav li {
 }
 
 .img-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
   -webkit-box-shadow: 0px 0px 1rem;
           box-shadow: 0px 0px 1rem;
   overflow: hidden;
@@ -843,11 +842,6 @@ footer {
 }
 
 @media (max-width: 1424px) {
-  .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 25rem;
-            flex: 1 1 25rem;
-  }
   .large-img {
     max-width: 90%;
   }
@@ -868,6 +862,10 @@ footer {
 @media (max-width: 900px) {
   #hero h2 {
     font-size: 8rem;
+  }
+  .img-container {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
 }
 
@@ -951,43 +949,13 @@ footer {
     max-width: 100%;
   }
   .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 20rem;
-            flex: 1 1 20rem;
-  }
-  .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 22rem;
-            flex: 1 1 22rem;
+    -ms-flex-preferred-size: 28%;
+        flex-basis: 28%;
   }
   form {
     min-width: 80%;
   }
   .footer-container h5 {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 496px) {
-  .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 16rem;
-            flex: 1 1 16rem;
-  }
-}
-
-@media (max-width: 370px) {
-  .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 14rem;
-            flex: 1 1 14rem;
-  }
-}
-
-@media (max-width: 332px) {
-  .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 12rem;
-            flex: 1 1 12rem;
   }
 }
