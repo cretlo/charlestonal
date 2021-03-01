@@ -57,6 +57,7 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// Fades hero into view when content is loaded
+window.addEventListener('DOMContentLoaded', () => {
   heroContainer.classList.add('active');
 });
