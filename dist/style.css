@@ -231,6 +231,7 @@ nav li {
 .hero-container h2,
 .hero-container p {
   text-shadow: 0 0 1rem black;
+  opacity: 0;
 }
 
 .hero-container h2 {
@@ -246,6 +247,13 @@ nav li {
   margin-top: 10rem;
   border-radius: 2rem;
   padding: 1rem 3rem;
+}
+
+.hero-container.active h2,
+.hero-container.active p {
+  opacity: 1;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
 }
 
 #about {
