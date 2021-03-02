@@ -296,10 +296,12 @@ button:hover {
 }
 
 .hero-container h2 {
+  display: none;
   font-size: 9rem;
 }
 
 .hero-container p {
+  display: none;
   margin-top: 3rem;
   font-size: 3.5rem;
 }
@@ -338,8 +340,13 @@ button:hover {
 .hero-container.active h2,
 .hero-container.active p {
   opacity: 1;
-  -webkit-transition: opacity 3s ease 0.2s;
-  transition: opacity 3s ease 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: opacity, -webkit-box-flex 3s ease 0.2s;
+  transition: opacity, -webkit-box-flex 3s ease 0.2s;
+  transition: opacity, flex 3s ease 0.2s;
+  transition: opacity, flex 3s ease 0.2s, -webkit-box-flex 3s ease 0.2s, -ms-flex 3s ease 0.2s;
 }
 
 #about {

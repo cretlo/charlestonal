@@ -9,8 +9,6 @@ const largeImg = document.querySelector('.large-img');
 const caption = document.querySelector('.caption');
 const anchorLinks = document.querySelectorAll('.nav-links li a');
 
-console.log(open);
-
 // Opens navigation on mobile
 open.addEventListener('click', () => {
   navLinks.classList.toggle('nav-open');
