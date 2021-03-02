@@ -35,12 +35,10 @@
   }
 
   h2 {
-    display: none;
     font-size: $header2;
   }
 
   p {
-    display: none;
     margin-top: 3rem;
     font-size: 3.5rem;
   }
@@ -73,6 +71,5 @@
 .hero-container.active h2,
 .hero-container.active p {
   opacity: 1;
-  display: flex;
-  transition: opacity, flex 3s ease 0.2s;
+  transition: opacity 3s ease 0.2s;
 }
