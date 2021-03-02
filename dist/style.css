@@ -338,8 +338,8 @@ button:hover {
 .hero-container.active h2,
 .hero-container.active p {
   opacity: 1;
-  -webkit-transition: opacity 3s ease;
-  transition: opacity 3s ease;
+  -webkit-transition: opacity 3s ease 0.2s;
+  transition: opacity 3s ease 0.2s;
 }
 
 #about {
