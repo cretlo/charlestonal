@@ -1,9 +1,25 @@
 #hero {
-  background: linear-gradient(black, transparent),
-    url('imgs/house-front.jpg') center center/cover;
-  object-fit: cover;
   color: white;
   text-align: center;
+
+  img,
+  .hero-gradient {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    z-index: -2;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    z-index: -1;
+  }
 }
 
 .hero-container {
