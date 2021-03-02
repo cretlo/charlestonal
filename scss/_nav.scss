@@ -13,11 +13,17 @@
   margin: 0 auto;
   min-height: 8vh;
 
-  h1 {
+  h1 a {
     flex: 2;
     font-family: 'Sriracha', cursive;
     font-weight: normal;
     font-size: $header1;
+    transition: all 0.5s ease;
+
+    &:focus {
+      outline: none;
+      color: $hover;
+    }
   }
 }
 
@@ -33,7 +39,12 @@
     padding: 1rem 2rem;
 
     &:hover {
-      color: darkgray;
+      color: $hover;
+    }
+
+    &:focus {
+      outline: none;
+      color: $hover;
     }
   }
 

@@ -27,10 +27,28 @@
     font-size: 3.5rem;
   }
 
-  button {
-    margin-top: 10rem;
-    border-radius: 2rem;
-    padding: 1rem 3rem;
+  .btn {
+    background-color: $button;
+    margin: 5rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 30rem;
+    border-radius: 1.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.5);
+    transition: background 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $hover;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $hover;
+    }
   }
 }
 
