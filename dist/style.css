@@ -813,7 +813,7 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 65rem;
-  max-width: 30%;
+  min-width: 40%;
   margin-top: 4rem;
   padding: 3rem 3rem 10rem 3rem;
   background: #706677;
@@ -931,6 +931,9 @@ footer {
   html {
     font-size: 50%;
   }
+  form {
+    min-width: 60%;
+  }
 }
 
 @media (max-width: 1067px) {
@@ -1036,7 +1039,7 @@ footer {
         flex-basis: 28%;
   }
   form {
-    max-width: 100%;
+    min-width: 100%;
   }
   .footer-container h5 {
     font-size: 2rem;

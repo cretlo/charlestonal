@@ -40,6 +40,9 @@ $active: rgb(42, 28, 56);
   html {
     font-size: 50%;
   }
+  form {
+    min-width: 60%;
+  }
 }
 
 @media (max-width: 1067px) {
@@ -136,7 +139,7 @@ $active: rgb(42, 28, 56);
   }
 
   form {
-    max-width: 100%;
+    min-width: 100%;
   }
 
   .footer-container h5 {
