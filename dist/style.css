@@ -834,6 +834,7 @@ form .form-control textarea {
   border: none;
   border-bottom: 0.2rem solid white;
   color: white;
+  padding: 0.5rem 1rem;
 }
 
 form .form-control input:focus,
