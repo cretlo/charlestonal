@@ -5,7 +5,6 @@
 
 form {
   @include flex(flex-start, center, column);
-  min-height: 65rem;
   min-width: 40%;
   margin-top: 4rem;
   padding: 3rem 3rem 10rem 3rem;
