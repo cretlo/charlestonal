@@ -1,0 +1,19 @@
+$header1: 3.4rem;
+$header2: 8rem;
+$header3: 5rem;
+$header4: 4rem;
+$header5: 3rem;
+$paragraph: 2rem;
+$primary: #706677;
+$secondary: #ccb7ae;
+$tertiary: #d6cfcb;
+$button: #a6808c;
+$hover: #403747;
+$active: rgb(42, 28, 56);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

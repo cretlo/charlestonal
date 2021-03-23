@@ -1,3 +1,12 @@
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 footer {
   min-height: 10vh;
   max-width: 100%;
@@ -11,7 +20,7 @@ footer {
 
   h5 {
     flex: 1 1 40rem;
-    font-size: $header5;
+    font-size: config.$header5;
   }
 
   ul {

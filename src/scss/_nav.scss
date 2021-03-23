@@ -1,5 +1,14 @@
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 #main-header {
-  background-color: $primary;
+  background-color: config.$primary;
   color: white;
   position: sticky;
   top: 0;
@@ -17,12 +26,12 @@
     flex: 2;
     font-family: 'Sriracha', cursive;
     font-weight: normal;
-    font-size: $header1;
+    font-size: config.$header1;
     transition: all 0.5s ease;
 
     &:focus {
       outline: none;
-      color: $hover;
+      color: config.$hover;
     }
   }
 }
@@ -39,17 +48,17 @@
     padding: 1rem 2rem;
 
     &:hover {
-      color: $hover;
+      color: config.$hover;
     }
 
     &:focus {
       outline: none;
-      color: $hover;
+      color: config.$hover;
     }
   }
 
   li {
-    font-size: $paragraph;
+    font-size: config.$paragraph;
   }
 }
 

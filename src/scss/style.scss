@@ -1,17 +1,14 @@
+@use 'config';
+@use 'global';
+@use 'nav';
+@use 'hero';
+@use 'about';
+@use 'gallery';
+@use 'services';
+@use 'location';
+@use 'contact';
+@use 'footer';
 /* pallet link: https://coolors.co/565264-706677-a6808c-ccb7ae-d6cfcb */
-
-$header1: 3.4rem;
-$header2: 9rem;
-$header3: 5rem;
-$header4: 4rem;
-$header5: 3rem;
-$paragraph: 2rem;
-$primary: #706677;
-$secondary: #ccb7ae;
-$tertiary: #d6cfcb;
-$button: #a6808c;
-$hover: #403747;
-$active: rgb(42, 28, 56);
 
 @mixin flex($justify, $align, $direction) {
   display: flex;
@@ -19,16 +16,6 @@ $active: rgb(42, 28, 56);
   align-items: $align;
   flex-direction: $direction;
 }
-
-@import 'global';
-@import 'nav';
-@import 'hero';
-@import 'about';
-@import 'gallery';
-@import 'services';
-@import 'location';
-@import 'contact';
-@import 'footer';
 
 @media (max-width: 1424px) {
   .large-img {
@@ -89,7 +76,7 @@ $active: rgb(42, 28, 56);
   }
 
   .nav-links {
-    background: $primary;
+    background: config.$primary;
     width: 100%;
     height: 100%;
     position: fixed;

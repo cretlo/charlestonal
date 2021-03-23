@@ -1,3 +1,12 @@
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 #contact {
   min-height: 100vh;
   @include flex(center, center, column);
@@ -8,7 +17,7 @@ form {
   min-width: 40%;
   margin-top: 4rem;
   padding: 3rem 3rem 10rem 3rem;
-  background: $primary;
+  background: config.$primary;
   border-radius: 3rem;
   position: relative;
 
@@ -22,7 +31,7 @@ form {
     input,
     textarea {
       width: 100%;
-      background-color: $hover;
+      background-color: config.$hover;
       border: none;
       border-bottom: 0.2rem solid white;
       color: white;

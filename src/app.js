@@ -1,3 +1,5 @@
+import './scss/style.scss';
+
 const navLinks = document.querySelector('.nav-links');
 const burgerContainer = document.querySelector('.burger-container');
 const open = document.getElementById('open');
@@ -22,7 +24,7 @@ close.addEventListener('click', () => {
 });
 
 // Closes navigation if a link is clicked, on mobile
-anchorLinks.forEach((link) => {
+anchorLinks.forEach(link => {
   link.addEventListener('click', () => {
     if (navLinks.classList.contains('nav-open')) {
       navLinks.classList.remove('nav-open');
@@ -32,10 +34,12 @@ anchorLinks.forEach((link) => {
 });
 
 // Large image modal displayed when a preview is clicked
-previews.forEach((preview) => {
-  preview.addEventListener('click', (e) => {
+previews.forEach(preview => {
+  preview.addEventListener('click', e => {
     const largeSrc = e.target.getAttribute('data-original');
     const altAtr = e.target.getAttribute('alt');
+
+    console.log(largeImg.src);
 
     largeImg.src = `${largeSrc}`;
     caption.innerHTML = altAtr;
@@ -45,7 +49,7 @@ previews.forEach((preview) => {
 });
 
 // Closes modal clicked anywhere
-modal.addEventListener('click', (e) => {
+modal.addEventListener('click', e => {
   if (
     e.target.classList[1] === 'open' ||
     e.target.classList[0] === 'large-img'
@@ -58,4 +62,5 @@ modal.addEventListener('click', (e) => {
 // Fades hero into view when content is loaded
 window.addEventListener('DOMContentLoaded', () => {
   heroContainer.classList.add('active');
+  console.log('IE PLEASE');
 });

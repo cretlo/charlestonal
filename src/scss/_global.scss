@@ -1,4 +1,12 @@
 /* Global Styles*/
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
 
 * {
   margin: 0;
@@ -22,7 +30,7 @@ section {
   overflow-x: hidden;
 }
 h1 {
-  font-size: $header1;
+  font-size: config.$header1;
 }
 
 header {
@@ -35,23 +43,23 @@ button,
 label,
 input,
 p {
-  font-size: $paragraph;
+  font-size: config.$paragraph;
   line-height: 1.6;
 }
 
 h2 {
-  font-size: $header2;
+  font-size: config.$header2;
 }
 
 h3 {
-  font-size: $header3;
+  font-size: config.$header3;
   width: 100%;
   text-align: center;
 }
 
 h4,
 h5 {
-  font-size: $header4;
+  font-size: config.$header4;
   font-weight: normal;
 }
 
@@ -61,7 +69,7 @@ a {
 }
 
 button {
-  background: $button;
+  background: config.$button;
   border: none;
   color: white;
   font-size: 4rem;
@@ -76,5 +84,5 @@ button {
 }
 
 button:hover {
-  background: $hover;
+  background: config.$hover;
 }

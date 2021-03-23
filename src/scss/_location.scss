@@ -1,8 +1,17 @@
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 #location {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  @include flex(center, center, row);
+  @include config.flex(center, center, row);
 
   #colorado-flag {
     background-color: linear-gradient(transparent, white);
@@ -20,7 +29,7 @@
 .location-container {
   max-width: 90%;
   margin: 5rem auto 0 auto;
-  @include flex(center, center, row);
+  @include config.flex(center, center, row);
   flex-wrap: wrap;
 
   h3 {
@@ -41,7 +50,7 @@
 
 #location-description {
   flex: 1 1 60rem;
-  background: $tertiary;
+  background: config.$tertiary;
   padding: 3rem;
   border-radius: 3rem;
 

@@ -1,3 +1,12 @@
+@use 'config';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 #hero {
   color: white;
   text-align: center;
@@ -35,7 +44,7 @@
   }
 
   h2 {
-    font-size: $header2;
+    font-size: config.$header2;
   }
 
   p {
@@ -44,7 +53,7 @@
   }
 
   .btn {
-    background-color: $button;
+    background-color: config.$button;
     margin: 5rem 0rem;
     display: flex;
     justify-content: center;
@@ -58,12 +67,12 @@
     transition: background 0.5s ease-in-out;
 
     &:hover {
-      background-color: $hover;
+      background-color: config.$hover;
     }
 
     &:focus {
       outline: none;
-      background-color: $hover;
+      background-color: config.$hover;
     }
   }
 }
