@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack"
+    "start": "webpack serve --open --watch-content-base",
+    "build": "SET NODE_ENV=production & webpack"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
-    "postcss": "^8.2.8",
+    "postcss": "^8.3.5",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.32.8",

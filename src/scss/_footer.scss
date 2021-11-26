@@ -1,35 +1,17 @@
 @use 'config';
 
-@mixin flex($justify, $align, $direction) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
-
-footer {
-  min-height: 10vh;
-  max-width: 100%;
-}
-
 .footer-container {
-  max-width: 90%;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding: 1rem 0rem;
-  @include flex(space-between, center, row);
+  margin-top: 2rem;
 
-  h5 {
-    flex: 1 1 40rem;
-    font-size: config.$header5;
-  }
-
-  ul {
-    flex: 1 1 20rem;
-    @include flex(space-evenly, center, row);
+  li {
     list-style: none;
   }
 
   img {
-    height: 5rem;
+    width: 2rem;
   }
 }

@@ -1,56 +1,40 @@
 @use 'config';
 
-@mixin flex($justify, $align, $direction) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
-
 #services {
-  min-height: 100vh;
-  margin: 0 auto;
-  @include flex(center, center, row);
 }
 
 .services-container {
-  max-width: 90%;
-  margin: 8.5rem auto 0 auto;
-}
-
-.cards {
-  margin-top: 3rem;
-  @include flex(center, stretch, row);
+  display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+
+  h4 {
+    font-size: config.$header4;
+    color: config.$primary;
+  }
 }
 
 .card {
-  flex: 1 1 35rem;
-  max-height: 100%;
-  margin: 1rem;
-  @include flex(stretch, center, column);
-  padding: 2rem 5rem;
-  box-shadow: 0 0 1rem grey;
-  border-radius: 3rem;
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0rem;
+  padding: 0.2rem 2rem;
+  border-radius: 1rem;
+  border: 0.2rem config.$primary solid;
+  background-color: white;
 
   img {
-    height: 10rem;
+    height: 5rem;
+    margin: 1rem;
   }
+}
 
-  h4 {
-    width: 100%;
-    font-size: 3rem;
-    margin-top: 3rem;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  ul {
-    width: 100%;
-    margin-top: 3rem;
-  }
-
-  li {
-    margin-top: 0.5rem;
+@media only screen and (min-width: 800px) {
+  .card {
+    margin: 1rem 1rem;
   }
 }

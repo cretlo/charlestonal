@@ -1,74 +1,74 @@
 @use 'config';
 
-@mixin flex($justify, $align, $direction) {
+.about-container {
+  min-height: 70vh;
   display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 
-#about {
-  min-height: 100vh;
   p {
     text-indent: 5%;
   }
-
-  @include flex(center, center, row);
-}
-
-.about-container {
-  @include flex(center, center, row);
-  flex-wrap: wrap;
-  border-radius: 15px;
-  max-width: 90%;
-  margin: 3rem auto 0 auto;
-}
-
-.people-container,
-.descriptions-container {
-  width: 100%;
-  margin-top: 0;
 }
 
 .descriptions-container {
-  flex: 1 1 50rem;
-  @include flex(space-around, center, column);
-  padding: 0 1rem;
+  max-width: 800px;
+  margin: 0rem auto;
+  display: flex;
+  flex-direction: column;
+
+  article {
+    margin-bottom: 2rem;
+  }
+
+  h3,
+  h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
   h4 {
     text-decoration: underline;
-    margin-top: 4rem;
-  }
-
-  p {
-    padding: 0rem 3rem;
-    margin-top: 2rem;
+    font-size: config.$header4;
   }
 }
 
 .people-container {
-  padding: 1rem;
-  flex: 1 1 50rem;
+  flex-basis: 800px;
+  margin: 0rem auto;
+
+  .people-card {
+    background-color: config.$secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    .lisa {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+
+    p {
+      padding: 0rem 1rem;
+    }
+  }
 }
 
-.people-card {
-  @include flex(space-around, center, row);
-  flex-wrap: wrap;
-
-  img {
-    flex: 0 2 8rem;
-    height: 15rem;
-    width: 20rem;
-    margin: 2rem;
-    border-radius: 50%;
-    margin-right: 1rem;
-    pointer-events: none;
+@media only screen and (min-width: 800px) {
+  .about-container {
+    flex-direction: row;
   }
 
-  p {
-    flex: 1 1 40rem;
-    background-color: config.$tertiary;
-    padding: 2rem 3rem;
-    border-radius: 3rem;
+  .people-container {
+    .people-card {
+      flex-direction: row;
+    }
   }
 }

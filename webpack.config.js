@@ -2,10 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+// Doesnt work for whatever reason
+const webpackMode =
+  process.env.NODE_ENV === 'production' ? 'production' : 'development';
+
 module.exports = {
+  mode: 'production',
   devServer: {
     contentBase: './dist',
   },
+  target: 'web',
   entry: './src/app.js',
   module: {
     rules: [
@@ -38,8 +44,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.[contenthash].js',
-    assetModuleFilename: 'images/[hash][ext][query]',
+    filename: '[contenthash].bundle.js',
+    assetModuleFilename: 'images/[name].[hash][ext][query]',
   },
-  mode: 'development',
 };
