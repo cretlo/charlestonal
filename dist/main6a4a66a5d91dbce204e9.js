@@ -495,7 +495,7 @@ module.exports = function (list, options) {
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfont8b43027f47b20503057d.eot";
+module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057d.eot";
 
 /***/ }),
 
@@ -503,7 +503,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfont8b43027f47b2
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfont8b43027f47b20503057d.eot?v=4.7.0";
+module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057d.eot?v=4.7.0";
 
 /***/ }),
 
@@ -511,7 +511,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfont8b43027f47b2
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfont1e59d2330b4c6deb84b3.ttf?v=4.7.0";
+module.exports = __webpack_require__.p + "fontawesome-webfont1e59d2330b4c6deb84b3.ttf?v=4.7.0";
 
 /***/ }),
 
@@ -519,7 +519,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfont1e59d2330b4c
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfont20fd1704ea223900efa9.woff2?v=4.7.0";
+module.exports = __webpack_require__.p + "fontawesome-webfont20fd1704ea223900efa9.woff2?v=4.7.0";
 
 /***/ }),
 
@@ -527,7 +527,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfont20fd1704ea22
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfontf691f37e57f04c152e23.woff?v=4.7.0";
+module.exports = __webpack_require__.p + "fontawesome-webfontf691f37e57f04c152e23.woff?v=4.7.0";
 
 /***/ }),
 
@@ -535,7 +535,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfontf691f37e57f0
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "images/fontawesome-webfontc1e38fd9e0e74ba58f7a.svg?v=4.7.0";
+module.exports = __webpack_require__.p + "fontawesome-webfontc1e38fd9e0e74ba58f7a.svg?v=4.7.0";
 
 /***/ })
 
@@ -609,7 +609,22 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfontc1e38fd9e0e7
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/dist";
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

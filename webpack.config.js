@@ -98,10 +98,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
-    assetModuleFilename: 'images/[name][hash][ext][query]',
+    assetModuleFilename: '[name][hash][ext][query]',
     environment: {
       arrowFunction: false,
     },
-    publicPath: '/dist',
+    publicPath: 'auto',
   },
 };
