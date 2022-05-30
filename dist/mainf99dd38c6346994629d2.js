@@ -495,7 +495,7 @@ module.exports = function (list, options) {
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057d.eot";
+module.exports = __webpack_require__.p + "8b43027f47b20503057d.eot";
 
 /***/ }),
 
@@ -503,7 +503,7 @@ module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057d.eot?v=4.7.0";
+module.exports = __webpack_require__.p + "8b43027f47b20503057d.eot?v=4.7.0";
 
 /***/ }),
 
@@ -511,7 +511,7 @@ module.exports = __webpack_require__.p + "fontawesome-webfont8b43027f47b20503057
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfont1e59d2330b4c6deb84b3.ttf?v=4.7.0";
+module.exports = __webpack_require__.p + "1e59d2330b4c6deb84b3.ttf?v=4.7.0";
 
 /***/ }),
 
@@ -519,7 +519,7 @@ module.exports = __webpack_require__.p + "fontawesome-webfont1e59d2330b4c6deb84b
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfont20fd1704ea223900efa9.woff2?v=4.7.0";
+module.exports = __webpack_require__.p + "20fd1704ea223900efa9.woff2?v=4.7.0";
 
 /***/ }),
 
@@ -527,7 +527,7 @@ module.exports = __webpack_require__.p + "fontawesome-webfont20fd1704ea223900efa
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfontf691f37e57f04c152e23.woff?v=4.7.0";
+module.exports = __webpack_require__.p + "f691f37e57f04c152e23.woff?v=4.7.0";
 
 /***/ }),
 
@@ -535,7 +535,7 @@ module.exports = __webpack_require__.p + "fontawesome-webfontf691f37e57f04c152e2
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = __webpack_require__.p + "fontawesome-webfontc1e38fd9e0e74ba58f7a.svg?v=4.7.0";
+module.exports = __webpack_require__.p + "c1e38fd9e0e74ba58f7a.svg?v=4.7.0";
 
 /***/ })
 

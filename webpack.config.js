@@ -47,12 +47,12 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
       {
         test: /\.m?js$/,
@@ -98,7 +98,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
-    assetModuleFilename: '[name][hash][ext][query]',
+    //assetModuleFilename: '[name][hash][ext][query]',
     environment: {
       arrowFunction: false,
     },
