@@ -102,6 +102,6 @@ module.exports = {
     environment: {
       arrowFunction: false,
     },
-    publicPath: '/dist/',
+    publicPath: '/dist',
   },
 };

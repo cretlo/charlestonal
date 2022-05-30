@@ -609,7 +609,7 @@ module.exports = __webpack_require__.p + "images/fontawesome-webfontc1e38fd9e0e7
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/dist/";
+/******/ 		__webpack_require__.p = "/dist";
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
