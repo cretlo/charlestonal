@@ -58,6 +58,7 @@
               alt="The chess room."
               width="1920"
               height="1280"
+              loading="lazy"
             />
           </li>
           <li>
@@ -66,6 +67,7 @@
               alt="The view of the mountains from the backyard."
               width="1920"
               height="1280"
+              loading="lazy"
             />
           </li>
           <li>
@@ -74,6 +76,7 @@
               alt="The kitchen and dining room."
               width="1920"
               height="1280"
+              loading="lazy"
             />
           </li>
           <li>
@@ -82,6 +85,7 @@
               alt="The frontyard and house."
               width="1920"
               height="1280"
+              loading="lazy"
             />
           </li>
         </ul>
@@ -134,22 +138,6 @@
                 Northern Colorado area.
               </p>
             </article>
-            <!-- <article class="people-card">
-            <img
-              class="lisa"
-              src="./imgs/newLisa.png"
-              alt="This is a picture of Lisa."
-            />
-            <p>
-              Lisa Foster, a registered nurse, serves as the Charleston Assisted
-              Living Administrator. She is a resident of Erie, Colorado, where
-              she is an active community member very familiar with the area.
-              Lisa’s nursing experience spans 15 years with the geriatric
-              population, and she serves as an advocate for all her residents.
-              Lisa’s previous nursing experience includes working in Assisted
-              Living, Skilled Nursing and Hospice in Northern Colorado.
-            </p>
-          </article> -->
           </div>
         </div>
         <div class="row">
@@ -171,6 +159,7 @@
                             width="175"
                             height="175"
                             class="responsive-img"
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -499,7 +488,11 @@
             <h4 class="center">Address</h4>
             <div class="card">
               <div class="card-image">
-                <img id="colorado-flag" src="./icons/usa-colorado.svg" />
+                <img
+                  id="colorado-flag"
+                  alt="Colorado flag."
+                  src="./icons/usa-colorado.svg"
+                />
               </div>
               <div class="card-content">
                 <p>
@@ -602,23 +595,23 @@
                 /></label>
               </p>
               <div class="input-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
+                <label for="name-emp">Name</label>
+                <input type="text" name="name-emp" id="name-emp" />
               </div>
               <div class="input-field">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <label for="email-emp">Email</label>
+                <input type="email" name="email-emp" id="email-emp" />
               </div>
               <div class="input-field">
-                <label for="phone">Phone</label>
-                <input type="text" name="phone" id="phone" />
+                <label for="phone-emp">Phone</label>
+                <input type="text" name="phone-emp" id="phone-emp" />
               </div>
               <div class="input-field">
-                <label for="message">Comments</label>
+                <label for="message-emp">Comments</label>
                 <textarea
                   class="materialize-textarea"
-                  name="message"
-                  id="message"
+                  name="message-emp"
+                  id="message-emp"
                   cols="25"
                   rows="4"
                   placeholder="Please don't hesitate to ask us any questions."
@@ -627,7 +620,7 @@
               <div class="input-field file-field">
                 <div class="btn primary-color">
                   <span>Upload Resume</span>
-                  <input type="file" required />
+                  <input name="file" type="file" required />
                 </div>
                 <div class="file-path-wrapper">
                   <input type="text" class="file-path validate" />
@@ -651,8 +644,9 @@
           <li>
             <a
               href="https://www.facebook.com/Charleston-Assisted-Living-297154397565441/"
-              ><i class="fa fa-facebook-official fa-3x white-text"></i
-            ></a>
+              ><i class="fa fa-facebook-official fa-3x white-text"></i>
+              <p class="hide">Facebook</p></a
+            >
           </li>
         </ul>
       </div>

@@ -94,12 +94,11 @@ html {
   margin: auto;
 }
 
-.section-contact .input-field label.active + input,
-.section-contact .input-field textarea:focus {
+.section-contact form .input-field label.active + input,
+.section-contact form .input-field textarea:focus {
   border-bottom-color: var(--secondary) !important;
   box-shadow: 0 1px 0 0 var(--secondary) !important;
 }
-
 /* .bg-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('./imgs/house-front.jpg');
