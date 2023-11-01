@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+
+interface Images {
+    img: ImageMetadata;
+    alt: string;
+    filenameNoExt: string;
+}
+
+const images = Astro.props.images as Images[];
+---
+
+<section id="gallery" class="py-5">
+    <h2 class="text-center fw-bolder pb-5">Gallery</h2>
+    <div class="row justify-content-center g-2">
+        {
+            images.map(({ img, alt }) => {
+                return (
+                    <div class="col-4 col-lg-3">
+                        <Image
+                            src={img}
+                            widths={[180, 230, 275, 320, img.width]}
+                            sizes={
+                                "(min-width: 1400px) 320px, (min-width: 1200px) 275px, (min-width: 768px) 230px, (min-width: 0px) 180px"
+                            }
+                            alt={alt}
+                            class="modal-trigger rounded img-fluid"
+                            tabindex="0"
+                            data-src={img.src}
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalElement"
+                        />
+                    </div>
+                );
+            })
+        }
+    </div>
+    <div
+        class="modal fade"
+        id="modalElement"
+        tabindex="-1"
+        aria-labelledby="imgModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="row">
+                <img
+                    class="col-12 img-fluid"
+                    id="modalImgElement"
+                    src=""
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    import { Modal } from "bootstrap";
+
+    // Fetch the Bootstrap modal element
+    const modalElement = document.getElementById("modalElement");
+    if (!modalElement) {
+        throw new Error("Modal element is undefined");
+    }
+
+    const myModal = new Modal(modalElement);
+
+    // Find all image elements by their class
+    const images = document.querySelectorAll(".modal-trigger");
+
+    // Loop through the images and add click event listeners
+    images.forEach((image) => {
+        image.addEventListener("click", (event: any) => {
+            const clickedSrc = event.target.getAttribute("data-src");
+            console.log(clickedSrc);
+
+            // Update the modal image source
+            const modalImage = document.getElementById(
+                "modalImgElement",
+            ) as HTMLImageElement;
+            if (!modalImage) {
+                console.error("Couldn't find modalImage");
+                return;
+            }
+            modalImage.src = clickedSrc;
+
+            // Show the modal
+            myModal.show();
+        });
+    });
+
+    // Handle modal close event to clear the modal image source
+    modalElement.addEventListener("hidden.bs.modal", () => {
+        const modalImage = document.getElementById(
+            "modalElement",
+        ) as HTMLImageElement;
+
+        modalImage.src = "";
+    });
+</script>

@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import lisaImage from "../../assets/imgs/newLisa.png";
+---
+
+<section id="about" class="section py-5">
+    <h2 class="text-center fw-bolder pb-5">About Us</h2>
+    <div class="row">
+        <article class="col col-md-12 col-lg-6">
+            <h3 class="fw-semibold">Charleston Assisted Living</h3>
+            <p>
+                Charleston Assisted Living is a residential assisted living
+                caring for up to 8 residents. Charleston provides care and
+                services for residents in a home-like environment. Our trained
+                staff utilizes special techniques necessary to properly care for
+                and meet residents' needs. Such techniques are more successful
+                in a small, soothing environment where there is less "hustle and
+                bustle" for the residents. Residents receive individualized
+                attention 24 hours per day, 7 days per week, from caregivers
+                trained in an assisted living environment, which includes a
+                registered nurse-administrator. The low resident to staff ratio
+                allows our caregivers to build and strengthen caring bonds with
+                our residents on a daily basis.
+            </p>
+        </article>
+        <article class="col-12 col-lg-6">
+            <h3 class="fw-semibold">The Management Team</h3>
+            <p>
+                The management team shares an extensive medical experience that
+                includes over 15 years of working with patients in hospice,
+                hospitals, assisted and skilled nursing facilities in the
+                Northern Colorado area.
+            </p>
+            <div class="card py-1">
+                <div class="card-body float-start">
+                    <Image
+                        class="rounded-circle mx-auto float-end"
+                        src={lisaImage}
+                        alt="Lisa Foster, charleston assisted living administrator"
+                        width="140"
+                        height="140"
+                    />
+                    <h4 class="card-title"><u>Lisa Foster</u></h4>
+                    <p>
+                        Lisa Foster, a registered nurse, serves as the
+                        Charleston Assisted Living Administrator. She is a
+                        resident of Erie, Colorado, where she is an active
+                        community member very familiar with the area. Lisa’s
+                        nursing experience spans 15 years with the geriatric
+                        population, and she serves as an advocate for all her
+                        residents. Lisa’s previous nursing experience includes
+                        working in Assisted Living, Skilled Nursing and Hospice
+                        in Northern Colorado.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

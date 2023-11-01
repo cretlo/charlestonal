@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-lg bg-my-primary" data-bs-theme="dark">
+    <div class="container text-white">
+        <a class="navbar-brand" href="#">CAL</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="nabar-toggler-icon">X</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#location">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    const sections = document.querySelectorAll("section");
+    const descriptionMetaTag: HTMLMetaElement | null = document.querySelector(
+        'meta[name="description"]',
+    );
+    const options = {
+        root: null, // viewport
+        rootMargin: "0px",
+        threshold: 0.6, // Example threshold, can be adjusted
+    };
+
+    const sectionMetaData: Record<string, Record<string, string>> = {
+        hero: {
+            title: "Charleston Assisted Living",
+            description:
+                "Charleston Assisted Living is a residential assisted living, caring for up to 8 residents. Located in the town of Erie Colorado, where retirement starts, under assuring-quality care.",
+        },
+        about: {
+            title: "About - Charleston Assisted Living",
+            description:
+                "Charleston provides care and services for residents in a home-like environment. Our trained staff utilizes special techniques necessary to properly care for and meet residents' needs.",
+        },
+        services: {
+            title: "Services - Charleston Assisted Living",
+            description:
+                "From personal care, gorgeous envrionments, therapeutic activities, and quality health care services, we provide you or your loved ones with a safe and happy living.",
+        },
+        gallery: {
+            title: "Gallery - Charleston Assisted Living",
+            description:
+                "View the comfortable housing, beautiful outdoor surroundings, and quality infrastructure our assisted living home/area provides.",
+        },
+        location: {
+            title: "Location - Charleston Assisted Living",
+            description:
+                "Located in Erie, Colorado, our majestic mountain views and progressive civic vision provides a genuine small-town feel with all the reassuring qualities that implies – a sense of community, neighbors who care, and a contemporary town with modern amenities and comforting closeness.",
+        },
+        contact: {
+            title: "Contact - Charleston Assisted Living",
+            description:
+                "Our contact forms allow you to make any inquiry for future residents or employees.",
+        },
+    };
+
+    const intersectionCallback = (
+        entries: IntersectionObserverEntry[],
+        _: IntersectionObserver,
+    ) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const sectionName = entry.target.id;
+                const metaData = sectionMetaData[sectionName];
+                document.title = metaData.title;
+                if (descriptionMetaTag) {
+                    descriptionMetaTag.setAttribute(
+                        "content",
+                        metaData.description,
+                    );
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(intersectionCallback, options);
+
+    // Loop through the elements and observe each one
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+</script>

@@ -1,0 +1,60 @@
+---
+
+import { Image } from "astro:assets";
+import paperPlane from "@fortawesome/fontawesome-free/svgs/solid/paper-plane.svg?raw"
+
+import type { ImageMetadata } from "astro";
+
+interface imgObj {
+    img: ImageMetadata,
+    alt: string,
+    filenameNoExt: string
+}
+
+const desiredImages = ["mountain-view", "house-front", "backyard", "kitchen-dining"];
+
+const images = Astro.props.images as imgObj[]
+
+const heroImages = images.filter(imgObj => desiredImages.includes(imgObj.filenameNoExt)).reverse();
+
+---
+
+<section id="hero" class="relative">
+    <div id="myCarousel" class="carousel slide carousel-fade hero-size" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {
+                heroImages.map(({img, alt}, index) => {
+                    return (
+                        <div class=`carousel-item ${index === 0 ? "active": ""}` data-bs-interval="3000">
+                            <Image
+                                class="hero-img"
+                                src={img}
+                                widths={[768, 992, 1200, 1400, img.width]}
+                                sizes={"(min-width: 1910px) 1920px, 95vh"}
+                                alt={alt}
+                            />
+                        </div>
+                    )
+                })
+            }
+        </div>
+    </div>
+    <div class="absolute center container" style="z-index: 88">
+        <div class="row-fluid">
+            <div class="col col-lg-5 mx-auto card text-center my-secondary">
+                <h3 class="card-header fw-bold py-3">Charleston Assisted Living</h3>
+                <div class="card-body px-5 py-4">
+                    <h4 class="card-title py-4">
+                        Where retirement starts, under assuring-quality care.
+                    </h4>
+                    <a href="#contact" class="btn btn-lg btn-my-primary"
+                        ><span class="hero-icon pe-2">
+                            <Fragment set:alt="Paper plane icon." set:html={paperPlane} />
+                        </span>Contact Now</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

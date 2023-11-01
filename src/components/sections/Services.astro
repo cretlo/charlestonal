@@ -1,0 +1,181 @@
+---
+import medical from "../../../node_modules/@fortawesome/fontawesome-free/svgs/solid/suitcase-medical.svg?raw";
+import seedling from "@fortawesome/fontawesome-free/svgs/solid/seedling.svg?raw";
+import paintBrush from "@fortawesome/fontawesome-free/svgs/solid/paintbrush.svg?raw";
+import heartPulse from "@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw";
+---
+
+<section id="services" class="py-5">
+    <h2 class="text-center fw-bolder pb-5">Services</h2>
+    <div class="row">
+        <div class="col col-lg-8 offset-lg-2">
+            <div
+                class="nav nav-pills nav-fill justify-content-center"
+                id="servicesTab"
+                role="tablist"
+            >
+                <li class="nav-item" role="presentation">
+                    <button
+                        type="button"
+                        class="nav-link active"
+                        id="personal-care-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#personal-care-tab-pane"
+                        aria-controls="personal-care-tab-pane"
+                        aria-selected="true"
+                        ><span class="services-icon" style="display: block;">
+                            <Fragment set:html={medical} />
+                        </span>Personal Care</button
+                    >
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                        type="button"
+                        class="nav-link"
+                        id="environment-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#environment-tab-pane"
+                        aria-controls="environment-tab-pane"
+                        aria-selected="false"
+                        ><span class="services-icon" style="display: block">
+                            <Fragment set:html={seedling} />
+                        </span>Environment</button
+                    >
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                        type="button"
+                        class="nav-link"
+                        id="activities-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#activities-tab-pane"
+                        aria-controls="activities-tab-pane"
+                        aria-selected="false"
+                        ><span class="services-icon" style="display: block;">
+                            <Fragment set:html={paintBrush} />
+                        </span>Therapeutic Activities Program
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                        type="button"
+                        class="nav-link"
+                        id="health-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#health-tab-pane"
+                        aria-controls="health-tab-pane"
+                        aria-selected="false"
+                        ><span class="services-icon" style="display: block;">
+                            <Fragment set:html={heartPulse} />
+                        </span>Health Care Services
+                    </button>
+                </li>
+            </div>
+            <div class="tab-content text-center pt-4" id="myTabContent">
+                <div
+                    class="tab-pane fade show active"
+                    id="personal-care-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="personal-care-tab"
+                    tabindex="0"
+                >
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Assistance with bathing, grooming, and dressing
+                        </li>
+                        <li class="list-group-item">Assistance with feeding</li>
+                        <li class="list-group-item">Incontinence care</li>
+                        <li class="list-group-item">
+                            Housekeeping and laundry services
+                        </li>
+                        <li class="list-group-item">
+                            Medication administration
+                        </li>
+                        <li class="list-group-item">Nutritional meals</li>
+                        <li class="list-group-item">
+                            Hydration program for encouragement of regular fluid
+                            intake
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="environment-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="envrionemnt-tab"
+                    tabindex="0"
+                >
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Furnished private or companion suites
+                        </li>
+                        <li class="list-group-item">
+                            Access to outdoor gardens and patios
+                        </li>
+                        <li class="list-group-item">
+                            Monitored fire safety system
+                        </li>
+                        <li class="list-group-item">
+                            Walker and wheelchair accommodating facility
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="activities-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="activities-tab"
+                    tabindex="0"
+                >
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Supervised familiar daily tasks such as setting the
+                            table and folding clothing
+                        </li>
+                        <li class="list-group-item">Music and sing-a-longs</li>
+                        <li class="list-group-item">Arts and crafts</li>
+                        <li class="list-group-item">Daily exercises</li>
+                        <li class="list-group-item">Gardening</li>
+                        <li class="list-group-item">
+                            Classic movies, musicals and travelogues
+                        </li>
+                        <li class="list-group-item">
+                            Games and memory invoking activities
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="health-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="health-tab"
+                    tabindex="0"
+                >
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Nursing services by home health agencies
+                        </li>
+                        <li class="list-group-item">
+                            Professional hair care and manicures
+                        </li>
+                        <li class="list-group-item">Podiatry services</li>
+                        <li class="list-group-item">Hospice services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    import Tab from "bootstrap/js/dist/tab.js";
+
+    const triggerTabList = document.querySelectorAll("#servicesTab button");
+    triggerTabList.forEach((triggerEl) => {
+        const tabTrigger = new Tab(triggerEl);
+
+        triggerEl.addEventListener("click", (event) => {
+            event.preventDefault();
+            tabTrigger.show();
+        });
+    });
+</script>

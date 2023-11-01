@@ -1,0 +1,74 @@
+---
+interface Props {
+    title: string;
+}
+
+import "../scss/custom.scss";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="lh-lg">
+        <slot />
+    </body>
+</html>
+<script>
+    //function updateMetaTagsForSection(section: string) {
+    //    interface SectionMeta {
+    //        section: {
+    //            title: string,
+    //            description: string
+    //        }
+    //    }
+
+    //    const sectionMeta: SectionMeta = {
+    //        about: {
+    //            title: "About Us - My Website",
+    //            description: "Learn more about our company and its history.",
+    //        },
+    //        services: {
+    //            title: "Our Services - My Website",
+    //            description: "Explore the services we offer to our customers.",
+    //        },
+    //        gallery: {
+    //            title: "Gallery - My Website",
+    //            description: "View our stunning image gallery.",
+    //        },
+    //        contact: {
+    //            title: "Contact Us - My Website",
+    //            description:
+    //                "Get in touch with us for inquiries and more information.",
+    //        },
+    //        // Add more sections and their corresponding title/description as needed
+    //    };
+
+    //    window.location.hash;
+
+    //    if (sectionMeta[section]) {
+    //        document.title = sectionMeta[section].title;
+    //        document
+    //            .querySelector('meta[name="description"]')
+    //            .setAttribute("content", sectionMeta[section].description);
+
+    //    }
+
+    //}
+
+    // Example usage
+    //window.onload = function () {
+    //    // Here, you might determine which section is being viewed (e.g., based on URL hash or scroll position)
+    //    // For example, if the URL has a hash like https://www.example.com/#about, you can extract the section name
+    //    const currentSection = "about"; // Example: This could be dynamically set based on user navigation or other events
+    //    window.URL.;
+    //    updateMetaTagsForSection(currentSection);
+    //};
+</script>

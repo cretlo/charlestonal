@@ -1,0 +1,77 @@
+---
+// TODO: Check out https://www.npmjs.com/package/astro-purgecss/v/2.3.0
+import path from "path";
+
+import Layout from "../layouts/Layout.astro";
+import About from "../components/sections/About.astro";
+import Navbar from "../components/sections/Navbar.astro";
+import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import Gallery from "../components/sections/Gallery.astro";
+import Location from "../components/sections/Location.astro";
+import Contact from "../components/sections/Contact.astro";
+import Footer from "../components/sections/Footer.astro";
+import type { ImageMetadata } from "astro";
+
+type strObj = Record<string, string>;
+
+const descriptions: strObj = {
+    backyard: "The back yard with foliage and walking path.",
+    bathroom: "One of our bathrooms.",
+    bathroom2: "Our second bathroom with assistive equipment.",
+    "bed-dresser": "A bed with a dresser next to it.",
+    bedroom2:
+        "Another bedroom with two beds, dressers, and pictures on the walls.",
+    "fireplace-bathroom": "The chess room.",
+    "full-bedroom": "A bedroom with two beds.",
+    "full-living-room":
+        "A living room displaying couches and entertainment system.",
+    hallway: "Our hallway with an assistive rail along the the wall.",
+    "house-diagnol":
+        "A diagnol image showing the garage and front of the house.",
+    "house-front": "The front of the house and front yard.",
+    "kitchen-dining": "Our open kitchen and dining area next to it.",
+    "lounging-couches": "Our lounging area with multiple couches.",
+    "mountain-view": "Beautiful view of colorado mountains from the back yard.",
+    patio: "Our roofed patio with table and chairs.",
+};
+
+const imageFiles: ImageMetadata[] = await Astro.glob(
+    "/src/assets/gallery/*",
+).then((files) => {
+    return files.map((file) => file.default);
+});
+
+const images = imageFiles.map((imageFile) => {
+    const pathArr = imageFile.src.split("?");
+    const fullFilename = path.basename(pathArr[0]);
+    const filenameNoExt = fullFilename.split(".")[0];
+
+    const alt = descriptions[filenameNoExt];
+    return {
+        img: imageFile,
+        alt: alt,
+        filenameNoExt,
+    };
+});
+---
+
+<Layout title="Charleston Assisted Living">
+    <header>
+        <Navbar />
+    </header>
+
+    <div class="header-buffer"></div>
+
+    <main>
+        <Hero images={images} />
+        <div class="container">
+            <About />
+            <Services />
+            <Gallery images={images} />
+            <Location />
+            <Contact />
+        </div>
+        <Footer />
+    </main>
+</Layout>

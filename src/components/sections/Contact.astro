@@ -1,0 +1,201 @@
+---
+import house from "@fortawesome/fontawesome-free/svgs/solid/house-chimney.svg?raw";
+import handshake from "@fortawesome/fontawesome-free/svgs/solid/handshake.svg?raw";
+---
+
+<section id="contact" class="py-5">
+    <h2 class="text-center fw-bolder pb-5">Contact</h2>
+    <div class="row">
+        <div class="accordion col col-lg-6 offset-lg-3" id="contactAccordion">
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed bg-my-tertiary"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseResident"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseResident"
+                        ><span class="contact-icon pe-2">
+                            <Fragment set:html={house} />
+                        </span>Resident Inquiry</button
+                    >
+                </h3>
+            </div>
+            <div
+                id="flush-collapseResident"
+                class="accordion-collapse collapse show bg-my-tertiary"
+                data-bs-parent="#contactAccordion"
+            >
+                <div class="accordion-body">
+                    <form
+                        name="contact"
+                        method="POST"
+                        netlify-honeypot="bot-field"
+                        data-netlify="true"
+                    >
+                        <div class="visually-hidden">
+                            <label for="dont-fill-out"
+                                >Don't fill this out if you're human:</label
+                            >
+                            <input
+                                id="dont-fill-out"
+                                type="text"
+                                name="bot-field"
+                            />
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="form-control"
+                                placeholder="name"
+                                required
+                            />
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="email"
+                            />
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                class="form-control"
+                                placeholder="phone"
+                            />
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea
+                                class="form-control"
+                                name="message"
+                                id="message"
+                                style="height: 100px"
+                                placeholder="Please don't hesitate to ask us any questions."
+                            ></textarea>
+                            <label for="message">Comments</label>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-my-primary">
+                            Submit</button
+                        >
+                    </form>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed bg-my-tertiary"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEmployment"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseEmployment"
+                        ><span class="contact-icon pe-2">
+                            <Fragment set:html={handshake} />
+                        </span>Employment Inquiry</button
+                    >
+                </h3>
+                <div
+                    id="flush-collapseEmployment"
+                    class="accordion-collapse collapse bg-my-tertiary"
+                    data-bs-parent="#contactAccordion"
+                >
+                    <div class="accordion-body">
+                        <div id="employment-form" class="collapsible-body">
+                            <form
+                                name="fileForm"
+                                data-netlify-recaptcha="true"
+                                enctype="multipart/form-data"
+                                method="POST"
+                                netlify-honeypot="bot-field"
+                                data-netlify="true"
+                            >
+                                <div class="visually-hidden">
+                                    <label for="dont-fill-out"
+                                        >Don't fill this out if you're human:</label
+                                    >
+                                    <input
+                                        id="dont-fill-out"
+                                        type="text"
+                                        name="bot-field"
+                                    />
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        name="name-emp"
+                                        id="name-emp"
+                                        class="form-control"
+                                        placeholder="name"
+                                        required
+                                    />
+                                    <label for="name-emp">Name</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="email"
+                                        name="email-emp"
+                                        id="email-emp"
+                                        class="form-control"
+                                        placeholder="email"
+                                    />
+                                    <label for="email-emp">Email</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        name="phone-emp"
+                                        id="phone-emp"
+                                        class="form-control"
+                                        placeholder="phone"
+                                    />
+                                    <label for="phone-emp">Phone</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea
+                                        name="message-emp"
+                                        id="message-emp"
+                                        class="form-control"
+                                        placeholder="Please don't hesitate to ask us any questions."
+                                    ></textarea>
+                                    <label for="message-emp">Comments</label>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <label
+                                        for="resume-emp"
+                                        class="input-group-text"
+                                        >Upload Resume</label
+                                    >
+                                    <input
+                                        name="resume-emp"
+                                        id="resume-emp"
+                                        type="file"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div data-netlify-recaptcha="true"></div>
+                                <button
+                                    type="submit"
+                                    class="btn btn-lg btn-my-primary me-auto"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
