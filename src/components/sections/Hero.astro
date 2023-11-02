@@ -32,6 +32,7 @@ const heroImages = images.filter(imgObj => desiredImages.includes(imgObj.filenam
                                 widths={[768, 992, 1200, 1400, img.width]}
                                 sizes={"(min-width: 1910px) 1920px, 95vh"}
                                 alt={alt}
+                                loading={index === 0 ? "eager" : "lazy"}
                             />
                         </div>
                     )

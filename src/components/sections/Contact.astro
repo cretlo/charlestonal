@@ -113,8 +113,7 @@ import handshake from "@fortawesome/fontawesome-free/svgs/solid/handshake.svg?ra
                     <div class="accordion-body">
                         <div id="employment-form" class="collapsible-body">
                             <form
-                                name="fileForm"
-                                data-netlify-recaptcha="true"
+                                name="fileorm"
                                 enctype="multipart/form-data"
                                 method="POST"
                                 netlify-honeypot="bot-field"
@@ -170,12 +169,10 @@ import handshake from "@fortawesome/fontawesome-free/svgs/solid/handshake.svg?ra
                                     ></textarea>
                                     <label for="message-emp">Comments</label>
                                 </div>
+                                <label for="resume-emp" class="input-group-text"
+                                    >Upload Resume</label
+                                >
                                 <div class="input-group mb-3">
-                                    <label
-                                        for="resume-emp"
-                                        class="input-group-text"
-                                        >Upload Resume</label
-                                    >
                                     <input
                                         name="resume-emp"
                                         id="resume-emp"
@@ -184,7 +181,10 @@ import handshake from "@fortawesome/fontawesome-free/svgs/solid/handshake.svg?ra
                                         required
                                     />
                                 </div>
-                                <div data-netlify-recaptcha="true"></div>
+                                <div class="form-text" id="basic-addon4">
+                                    Please ensure your resume file is less than
+                                    8MB or else we may not receive it.
+                                </div>
                                 <button
                                     type="submit"
                                     class="btn btn-lg btn-my-primary me-auto"
