@@ -1,59 +1,84 @@
 ---
 import { Image } from "astro:assets";
-import lisaImage from "../../assets/imgs/newLisa.png";
+import bestInImage from "../../assets/imgs/best-in-senior-living.png";
+
+//        widths={[180, 230, 275, 320, bestInImage.width]}
+//        sizes={"(min-width: 1400px) 320px, (min-width: 1200px) 275px, (min-width: 768px) 230px, (min-width: 0px) 180px"}
 ---
 
 <section id="about" class="section py-5">
-    <h2 class="text-center fw-bolder pb-5">About Us</h2>
+  <h2 class="text-center fw-bolder pb-5">About Us</h2>
+  <div class="row">
+    <article class="col col-md-12 col-lg-6">
+      <h3 class="fw-semibold">Charleston Assisted Living</h3>
+      <p>
+        Charleston Assisted Living is a residential assisted living caring for
+        up to 8 residents. Charleston provides care and services for residents
+        in a home-like environment. Our trained staff utilizes special
+        techniques necessary to properly care for and meet residents' needs.
+        Such techniques are more successful in a small, soothing environment
+        where there is less "hustle and bustle" for the residents. Residents
+        receive individualized attention 24 hours per day, 7 days per week, from
+        caregivers trained in an assisted living environment, which includes a
+        registered nurse-administrator. The low resident to staff ratio allows
+        our caregivers to build and strengthen caring bonds with our residents
+        on a daily basis.
+      </p>
+      <h3 class="fw-semibold">The Management Team</h3>
+      <p>
+        The management team shares an extensive medical experience that includes
+        over 15 years of working with patients in hospice, hospitals, assisted
+        and skilled nursing facilities in the Northern Colorado area.
+      </p>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="card py-1">
+        <div class="card-body">
+          <h3 class="card-title"><u>Melissa Moore</u></h3>
+          <p>
+            Meet Melissa Moore, the dedicated owner of Charleston Assisted
+            Living. With over 15 years of experience as a Registered Nurse,
+            Melissa brings a wealth of expertise in wound care and geriatric
+            care to her role. Her extensive background includes hands-on
+            experience in both nursing homes and assisted living facilities,
+            where she has developed a deep understanding of the unique needs of
+            elderly residents.
+          </p>
+          <p>
+            Melissa's commitment to her residents goes beyond traditional care;
+            she is a passionate advocate for their well-being and quality of
+            life. She ensures that each resident receives personalized and
+            compassionate care, tailored to their individual needs. Her
+            proactive approach in managing and preventing wounds, coupled with
+            her in-depth knowledge of geriatric health, underscores her
+            dedication to maintaining the highest standards of care at
+            Charleston Assisted Living.
+          </p>
+          <p>
+            As the driving force behind the facility, Melissa fosters a warm and
+            supportive environment, where residents feel valued and respected.
+            Her leadership and hands-on involvement ensure that Charleston
+            Assisted Living is not just a place to live, but a home where
+            residents thrive under the attentive and expert care she
+            passionately provides.
+          </p>
+        </div>
+      </div>
+    </article>
     <div class="row">
-        <article class="col col-md-12 col-lg-6">
-            <h3 class="fw-semibold">Charleston Assisted Living</h3>
-            <p>
-                Charleston Assisted Living is a residential assisted living
-                caring for up to 8 residents. Charleston provides care and
-                services for residents in a home-like environment. Our trained
-                staff utilizes special techniques necessary to properly care for
-                and meet residents' needs. Such techniques are more successful
-                in a small, soothing environment where there is less "hustle and
-                bustle" for the residents. Residents receive individualized
-                attention 24 hours per day, 7 days per week, from caregivers
-                trained in an assisted living environment, which includes a
-                registered nurse-administrator. The low resident to staff ratio
-                allows our caregivers to build and strengthen caring bonds with
-                our residents on a daily basis.
-            </p>
-        </article>
-        <article class="col-12 col-lg-6">
-            <h3 class="fw-semibold">The Management Team</h3>
-            <p>
-                The management team shares an extensive medical experience that
-                includes over 15 years of working with patients in hospice,
-                hospitals, assisted and skilled nursing facilities in the
-                Northern Colorado area.
-            </p>
-            <div class="card py-1">
-                <div class="card-body float-start">
-                    <Image
-                        class="rounded-circle mx-auto float-end"
-                        src={lisaImage}
-                        alt="Lisa Foster, charleston assisted living administrator"
-                        width="140"
-                        height="140"
-                    />
-                    <h4 class="card-title"><u>Lisa Foster</u></h4>
-                    <p>
-                        Lisa Foster, a registered nurse, serves as the
-                        Charleston Assisted Living Administrator. She is a
-                        resident of Erie, Colorado, where she is an active
-                        community member very familiar with the area. Lisa’s
-                        nursing experience spans 15 years with the geriatric
-                        population, and she serves as an advocate for all her
-                        residents. Lisa’s previous nursing experience includes
-                        working in Assisted Living, Skilled Nursing and Hospice
-                        in Northern Colorado.
-                    </p>
-                </div>
-            </div>
-        </article>
+      <a
+        href="https://assistedlivingmagazine.com/nursing-home/charleston-assisted-living/"
+        class="col-md-7 col-lg-5 col-xl-4 mx-auto"
+      >
+        <Image
+          width={408}
+          src={bestInImage}
+          alt="Image of Assisted Living Magazine Best In Senior Living badge"
+          class="img-fluid"
+          tabindex="0"
+          data-src={bestInImage.src}
+        />
+      </a>
     </div>
+  </div>
 </section>
