@@ -176,4 +176,11 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.best-in {
+    border-top: $border-width solid #cdc1b9;
+    border-bottom: $border-width solid #cdc1b9;
+
+}
+
 //@import "../../node_modules/bootstrap/scss/bootstrap.scss";

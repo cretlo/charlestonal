@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import bestInImage from "../../assets/imgs/best-in-senior-living.png";
+import melissaImg from "../../assets/imgs/melissa-profile-pic.jpg";
+import melissaImgCropped from "../../assets/imgs/melissa-profile-pic-cropped.jpg";
 
 //        widths={[180, 230, 275, 320, bestInImage.width]}
 //        sizes={"(min-width: 1400px) 320px, (min-width: 1200px) 275px, (min-width: 768px) 230px, (min-width: 0px) 180px"}
@@ -33,9 +35,17 @@ import bestInImage from "../../assets/imgs/best-in-senior-living.png";
     </article>
     <article class="col-12 col-lg-6">
       <div class="card py-1">
-        <div class="card-body">
-          <h3 class="card-title"><u>Melissa Moore</u></h3>
-          <p>
+        <div class="card-body clear-fix">
+          <h3 class="card-title text-center text-md-start">
+            <u>Melissa Moore</u>
+          </h3>
+          <Image
+            src={melissaImgCropped}
+            width={200}
+            alt="Picture of the owner, Melissa Moore"
+            class="mx-auto d-block float-md-end rounded-pill"
+          />
+          <p class="float-md-start">
             Meet Melissa Moore, the dedicated owner of Charleston Assisted
             Living. With over 15 years of experience as a Registered Nurse,
             Melissa brings a wealth of expertise in wound care and geriatric
@@ -65,10 +75,14 @@ import bestInImage from "../../assets/imgs/best-in-senior-living.png";
         </div>
       </div>
     </article>
-    <div class="row">
+  </div>
+  <div class="best-in row mt-5">
+    <div
+      class="col-md-7 col-lg-5 col-xl-4 mx-auto d-flex justify-content-center align-items-center"
+    >
       <a
         href="https://assistedlivingmagazine.com/nursing-home/charleston-assisted-living/"
-        class="col-md-7 col-lg-5 col-xl-4 mx-auto"
+        class="mx-auto"
       >
         <Image
           width={408}
@@ -79,6 +93,16 @@ import bestInImage from "../../assets/imgs/best-in-senior-living.png";
           data-src={bestInImage.src}
         />
       </a>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+      <figure class="text-end">
+        <blockquote class="blockquote h3">
+          <p>Best Assisted Living in Erie and Layfayette, CO.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          <cite title="Source Title">Assisted Living Magazine</cite>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
